@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import VideoCard from './VideoCard'
+import {Link} from 'react-router-dom'
 
 
 const Container = styled.div`
@@ -23,23 +24,42 @@ gap:3rem;
 const Videos = () => {
   return (
     <Container>
+    <Link to='/:id'>
         <VideoCard/>
+    </Link>
+    
+    <Link to='/:id'>
         <VideoCard/>
+    </Link>
+
+    <Link to='/:id'>
         <VideoCard/>
+    </Link>
+
+    <Link to='/:id'>
         <VideoCard/>
+    </Link>
+
+    <Link to='/:id'>
         <VideoCard/>
+    </Link>
+
+    <Link to='/:id'>
         <VideoCard/>
+    </Link>
+
+    <Link to='/:id'>
         <VideoCard/>
+    </Link>
+
+    <Link to='/:id'>
         <VideoCard/>
+    </Link>
+
+    <Link to='/:id'>
         <VideoCard/>
-        <VideoCard/>
-        <VideoCard/>
-        <VideoCard/>
-        <VideoCard/>
-        <VideoCard/>
-        <VideoCard/>
-        <VideoCard/>
-        <VideoCard/>
+    </Link>
+
     </Container>
   )
 }

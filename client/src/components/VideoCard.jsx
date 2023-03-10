@@ -1,6 +1,29 @@
 import React from 'react'
 import styled from 'styled-components'
 
+
+const VideoCard = () => {
+  return (
+    <Container>
+        <img className='video-img' src="https://images.pexels.com/photos/13010778/pexels-photo-13010778.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
+        <div className='video-details'>
+            <p className='video-title'>
+                Scuba Diving
+            </p>
+            <div className='user-details'>
+            <img className='user-img' src="https://images.pexels.com/photos/15031644/pexels-photo-15031644.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
+            <p className='user-name'>Nilay Singh</p>
+            </div>
+        </div>
+    </Container>
+  )
+}
+
+export default VideoCard
+
+
+// <----------------------------------------- CSS ------------------------------------------------->
+
 const Container = styled.div`
 display: flex;
 flex-direction: column;
@@ -47,22 +70,3 @@ gap:0.5rem;
 }
 
 `;
-
-const VideoCard = () => {
-  return (
-    <Container>
-        <img className='video-img' src="https://images.pexels.com/photos/13010778/pexels-photo-13010778.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
-        <div className='video-details'>
-            <p className='video-title'>
-                Scuba Diving
-            </p>
-            <div className='user-details'>
-            <img className='user-img' src="https://images.pexels.com/photos/15031644/pexels-photo-15031644.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
-            <p className='user-name'>Nilay Singh</p>
-            </div>
-        </div>
-    </Container>
-  )
-}
-
-export default VideoCard

@@ -3,6 +3,32 @@ import styled from 'styled-components'
 import Comment from './Comment';
 import SendOutlinedIcon from '@mui/icons-material/SendOutlined';
 
+const CommentSection = () => {
+  return (
+    <Container>
+        <p className='title'>Comments</p>
+        <div className='post-comment'>
+            <input type="text" placeholder='Enter a comment'/>
+            <p><SendOutlinedIcon/></p>
+        </div>
+        <div className='comments'>
+            <Comment/>
+            <Comment/>
+            <Comment/>
+            <Comment/>
+            <Comment/>
+            <Comment/>
+            <Comment/>
+        </div>
+    </Container>
+  )
+}
+
+export default CommentSection
+
+
+// <----------------------------------------- CSS ------------------------------------------------->
+
 const Container = styled.div`
 display: flex;
 flex-direction: column;
@@ -44,26 +70,3 @@ input{
 }
 
 `;
-
-const CommentSection = () => {
-  return (
-    <Container>
-        <p className='title'>Comments</p>
-        <div className='post-comment'>
-            <input type="text" placeholder='Enter a comment'/>
-            <p><SendOutlinedIcon/></p>
-        </div>
-        <div className='comments'>
-            <Comment/>
-            <Comment/>
-            <Comment/>
-            <Comment/>
-            <Comment/>
-            <Comment/>
-            <Comment/>
-        </div>
-    </Container>
-  )
-}
-
-export default CommentSection

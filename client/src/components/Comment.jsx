@@ -1,6 +1,27 @@
 import React from 'react'
 import styled from 'styled-components'
 
+
+const Comment = () => {
+  return (
+    <Container>
+         <img className='user-img' src='https://images.pexels.com/photos/13010778/pexels-photo-13010778.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'/>
+         <div className='user-comment'>
+            <p className='user-name'>Nilay Singh</p>
+            <p className='coment-content'>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id velit quas eveniet. Voluptate excepturi minus perferendis harum vero libero accusantium, rerum nesciunt, consequuntur quidem dolores? Voluptatem ullam maxime ipsum minima?
+            </p>
+         </div>
+    </Container>
+  )
+}
+
+export default Comment
+
+
+
+// <----------------------------------------- CSS ------------------------------------------------->
+
 const Container = styled.div`
 display: flex;
 align-items:flex-start;
@@ -25,21 +46,4 @@ font-size: 0.9rem;
     }
 }
 
-
 `;
-
-const Comment = () => {
-  return (
-    <Container>
-         <img className='user-img' src='https://images.pexels.com/photos/13010778/pexels-photo-13010778.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'/>
-         <div className='user-comment'>
-            <p className='user-name'>Nilay Singh</p>
-            <p className='coment-content'>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id velit quas eveniet. Voluptate excepturi minus perferendis harum vero libero accusantium, rerum nesciunt, consequuntur quidem dolores? Voluptatem ullam maxime ipsum minima?
-            </p>
-         </div>
-    </Container>
-  )
-}
-
-export default Comment

@@ -1,7 +1,34 @@
 import React from 'react'
 import styled from 'styled-components';
 import {IoMdNotificationsOutline} from 'react-icons/io'
+import {Link} from 'react-router-dom'
 
+const Navbar = () => {
+  return (
+     <Container>
+        <Link to='/'>
+          <Right>
+              <span>V</span>
+              <p>stream</p>
+          </Right>
+        </Link>
+          <Center>
+              <input type="text" placeholder='Search'/>
+          </Center>
+          <Left>
+                <p>
+                    <IoMdNotificationsOutline/>
+                </p>
+                <img src="https://images.pexels.com/photos/15031644/pexels-photo-15031644.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
+          </Left>
+     </Container>
+  )
+}
+
+export default Navbar
+
+
+// <----------------------------------------- CSS ------------------------------------------------->
 
 const Container = styled.div`
 height: 3rem;
@@ -68,28 +95,3 @@ img{
 }
 
 `;
-
-
-
-
-const Navbar = () => {
-  return (
-     <Container>
-          <Right>
-              <span>V</span>
-              <p>stream</p>
-          </Right>
-          <Center>
-              <input type="text" placeholder='Search'/>
-          </Center>
-          <Left>
-                <p>
-                    <IoMdNotificationsOutline/>
-                </p>
-                <img src="https://images.pexels.com/photos/15031644/pexels-photo-15031644.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
-          </Left>
-     </Container>
-  )
-}
-
-export default Navbar
