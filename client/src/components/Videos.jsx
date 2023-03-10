@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import Video from './Video'
+import VideoCard from './VideoCard'
+
 
 const Container = styled.div`
 padding: 3rem;
@@ -14,18 +15,23 @@ gap:3rem;
 const Videos = () => {
   return (
     <Container>
-        <Video/>
-        <Video/>
-        <Video/>
-        <Video/>
-        <Video/>
-        <Video/>
-        <Video/>
-        <Video/>
-        <Video/>
-        <Video/>
-        <Video/>
-        <Video/>
+        <VideoCard/>
+        <VideoCard/>
+        <VideoCard/>
+        <VideoCard/>
+        <VideoCard/>
+        <VideoCard/>
+        <VideoCard/>
+        <VideoCard/>
+        <VideoCard/>
+        <VideoCard/>
+        <VideoCard/>
+        <VideoCard/>
+        <VideoCard/>
+        <VideoCard/>
+        <VideoCard/>
+        <VideoCard/>
+        <VideoCard/>
     </Container>
   )
 }

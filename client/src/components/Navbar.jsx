@@ -17,6 +17,7 @@ const Right = styled.div`
 font-weight: bold;
 display: flex;
 font-size: 1.5rem;
+cursor: pointer;
 
 span{
     color: #e473ff;

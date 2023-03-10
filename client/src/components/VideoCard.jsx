@@ -47,7 +47,7 @@ gap:0.5rem;
 
 `;
 
-const Video = () => {
+const VideoCard = () => {
   return (
     <Container>
         <img className='video-img' src="https://images.pexels.com/photos/13010778/pexels-photo-13010778.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
@@ -64,4 +64,4 @@ const Video = () => {
   )
 }
 
-export default Video
+export default VideoCard

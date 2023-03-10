@@ -1,13 +1,13 @@
 import Videos from "./components/Videos";
 import Home from "./pages/Home";
-import SingleVideo from "./pages/SingleVideo";
+import Video from "./pages/Video";
 
 function App() {
   return (
     <div className="App">
          <Home/>
          {/* <Videos/> */}
-         <SingleVideo/>
+         <Video/>
     </div>
   );
 }
