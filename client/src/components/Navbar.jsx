@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components';
 import {IoMdNotificationsOutline} from 'react-icons/io'
 import {Link} from 'react-router-dom'
+import Notifications from './Notifications';
 
 const Navbar = () => {
   return (
@@ -21,6 +22,7 @@ const Navbar = () => {
                 </p>
                 <img src="https://images.pexels.com/photos/15031644/pexels-photo-15031644.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
           </Left>
+          <Notifications/>
      </Container>
   )
 }
