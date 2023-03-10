@@ -5,7 +5,7 @@ const Container = styled.div`
 display: flex;
 flex-direction: column;
 height: auto;
-width: 22rem;
+width: 20rem;
 cursor: pointer;
 gap:0.5rem;
 
@@ -31,7 +31,7 @@ gap:0.5rem;
         gap: 0.5rem;
 
         .user-name{
-        font-weight: 300;
+        font-weight: 400;
         color: grey;
         font-size: 0.8rem;
         }
