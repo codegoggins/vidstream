@@ -2,9 +2,10 @@ import React from 'react'
 import styled from 'styled-components'
 import Notification from './Notification'
 
-const Notifications = () => {
+const Notifications = ({show}) => {
   return (
-    <Container>
+    <Container show={show}>
+    <Title>Notifications</Title>
         <Notification/>
         <Notification/>
         <Notification/>
@@ -22,8 +23,12 @@ export default Notifications
 
 // <----------------------------------------- CSS ------------------------------------------------->
 
+const Title = styled.p`
+padding:1rem;
+`;
+
 const Container = styled.div`
-display: flex;
+display: ${({ show }) => (show ? 'flex' : 'none')};
 flex-direction: column;
 gap: 1rem;
 position: absolute;

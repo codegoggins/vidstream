@@ -11,6 +11,9 @@ const Notification = () => {
 
 export default Notification
 
+// <----------------------------------------- CSS ------------------------------------------------->
+
+
 const Container = styled.div`
 border-bottom: 0.03rem solid grey;
 margin:0 0.4rem;

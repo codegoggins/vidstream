@@ -1,10 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components';
 import {IoMdNotificationsOutline} from 'react-icons/io'
 import {Link} from 'react-router-dom'
 import Notifications from './Notifications';
 
 const Navbar = () => {
+
+  const [toggle,setToggle] = useState(false);  
+
+  const handlePopup = () => {
+     setToggle(!toggle);
+  }
+
   return (
      <Container>
         <Link to='/'>
@@ -17,12 +24,12 @@ const Navbar = () => {
               <input type="text" placeholder='Search'/>
           </Center>
           <Left>
-                <p>
+                <p onClick={handlePopup}>
                     <IoMdNotificationsOutline/>
                 </p>
                 <img src="https://images.pexels.com/photos/15031644/pexels-photo-15031644.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
           </Left>
-          <Notifications/>
+          <Notifications show={toggle}/>
      </Container>
   )
 }
@@ -38,6 +45,7 @@ padding: 3rem;
 display: flex;
 align-items: center;
 justify-content: space-between;
+position: relative;
 
 `;
 
