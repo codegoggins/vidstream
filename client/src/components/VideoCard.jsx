@@ -5,12 +5,13 @@ const Container = styled.div`
 display: flex;
 flex-direction: column;
 height: auto;
-width: 20rem;
+width: 22rem;
 cursor: pointer;
 gap:0.5rem;
 
 .video-img{
     border-radius: 0.3rem;
+    width:full;
 }
 
 

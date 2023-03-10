@@ -9,6 +9,10 @@ flex-direction: column;
 gap: 2rem;
 padding: 0rem 3rem 5rem 3rem;
 
+.title{
+    font-size: 1.2rem;
+}
+
 input{
     width: 80%;
     font-size: 1rem;
