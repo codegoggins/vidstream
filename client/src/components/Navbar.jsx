@@ -4,8 +4,8 @@ import {IoMdNotificationsOutline} from 'react-icons/io'
 
 
 const Container = styled.div`
-height: 5rem;
-padding: 0 3rem;
+height: 3rem;
+padding: 3rem;
 display: flex;
 align-items: center;
 justify-content: space-between;
