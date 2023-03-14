@@ -9,6 +9,7 @@ import {
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import SignIn from "./pages/SignIn";
+import SignUp from "./pages/SignUp";
 
 const Layout = () => {
    return (
@@ -36,6 +37,10 @@ const router = createBrowserRouter([
       {
         path: "/signin",
         element:<SignIn/>,
+      },
+      {
+        path: "/signup",
+        element:<SignUp/>,
       }
     ]
   }

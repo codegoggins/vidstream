@@ -1,27 +1,31 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const SignIn = () => {
+
+const SignUp = () => {
   return (
     <Container>
-        <Title>Sign In</Title>
+        <Title>Sign Up</Title>
         <Form>
+           <input type='email' placeholder='Email'/>
            <input type="text" placeholder='Username'/>
            <input type='password' placeholder='Password'/>
-           <button>Sign In</button>
+           <button>Sign Up</button>
            <p>or</p>
-           <button>Sign In with Google</button>
+           <button>Sign Up with Google</button>
         </Form>
     </Container>
   )
 }
 
-export default SignIn
+export default SignUp
+
+
 
 // <----------------------------------------- CSS ------------------------------------------------->
 
 const Container = styled.div`
-height:65vh;
+height:70vh;
 width:25rem;
 border: 1px solid #e473ff;
 border-radius: 1rem;
