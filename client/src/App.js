@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import SignIn from "./pages/SignIn";
 
 const Layout = () => {
    return (
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
         path: "/:id",
         element:<Video/>,
       },
+      {
+        path: "/signin",
+        element:<SignIn/>,
+      }
     ]
   }
 ]);
