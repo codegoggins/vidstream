@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import styled from 'styled-components';
 import {IoMdNotificationsOutline} from 'react-icons/io'
 import {Link} from 'react-router-dom'
-import Notifications from './Notifications';
 import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
 import MenuOutlinedIcon from '@mui/icons-material/MenuOutlined';
 import CloseOutlinedIcon from '@mui/icons-material/CloseOutlined';
@@ -13,10 +12,6 @@ const Navbar = () => {
 
   const [toggle,setToggle] = useState(false);  
   const [open,setOpen] = useState(false);  
-
-  const handlePopup = () => {
-     setToggle(!toggle);
-  }
 
   const handleOpen = () => {
     setOpen(!open);
@@ -36,9 +31,6 @@ const Navbar = () => {
               <input type="text" placeholder='Search'/>
           </Center>
           <Left>
-                <p onClick={handlePopup}>
-                    <IoMdNotificationsOutline/>
-                </p>
                 <img src="https://images.pexels.com/photos/15031644/pexels-photo-15031644.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
                 <Link to='settings'>
                 <SettingsOutlinedIcon/>
@@ -59,7 +51,6 @@ const Navbar = () => {
           <SideMenuBtn onClick={handleOpen}>
               <MenuOutlinedIcon fontSize='large'/>
           </SideMenuBtn>
-          <Notifications show={toggle}/>
      </Container>
 
 
@@ -171,7 +162,7 @@ input{
     }
 }
 
-@media(max-width:768px){
+@media(max-width:900px){
     display: none;
 }
 
@@ -196,7 +187,7 @@ img{
     border: 0.15rem solid #e473ff;
 }
 
-@media(max-width:768px){
+@media(max-width:900px){
     display: none;
 }
 
@@ -219,7 +210,7 @@ img{
 const SideMenuBtn = styled.div`
 cursor: pointer;
 display: none;
-@media(max-width:768px){
+@media(max-width:900px){
     display:block;
 }
 `;
@@ -246,7 +237,7 @@ flex-direction: column;
 align-items:left;
 justify-content:flex-start;
 gap:3rem;
-@media(max-width:768px){
+@media(max-width:900px){
     width:80vw;
 }
 `;

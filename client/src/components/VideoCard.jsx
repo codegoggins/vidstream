@@ -31,7 +31,18 @@ flex-direction: column;
 height: auto;
 width: 20rem;
 cursor: pointer;
-gap:0.5rem;
+gap:0.8rem;
+
+@media(min-width:1000px){
+    width: 26rem;
+}
+
+@media(min-width:768px){
+    width: 23rem;
+}
+
+
+
 
 .video-img{
     border-radius: 0.3rem;
@@ -69,5 +80,4 @@ gap:0.5rem;
         }
     }
 }
-
 `;
