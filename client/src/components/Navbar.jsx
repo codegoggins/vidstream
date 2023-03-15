@@ -6,14 +6,22 @@ import Notifications from './Notifications';
 import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
 import MenuOutlinedIcon from '@mui/icons-material/MenuOutlined';
 import CloseOutlinedIcon from '@mui/icons-material/CloseOutlined';
+import LoginOutlinedIcon from '@mui/icons-material/LoginOutlined';
+import HowToRegOutlinedIcon from '@mui/icons-material/HowToRegOutlined';
 
 const Navbar = () => {
 
   const [toggle,setToggle] = useState(false);  
+  const [open,setOpen] = useState(false);  
 
   const handlePopup = () => {
      setToggle(!toggle);
   }
+
+  const handleOpen = () => {
+    setOpen(!open);
+  }
+  
 
   return (
       <>
@@ -36,7 +44,7 @@ const Navbar = () => {
                 <SettingsOutlinedIcon/>
                 </Link>
           </Left>
-          <SideMenuBtn>
+          <SideMenuBtn onClick={handleOpen}>
               <MenuOutlinedIcon fontSize='large'/>
           </SideMenuBtn>
           <Notifications show={toggle}/>
@@ -44,9 +52,10 @@ const Navbar = () => {
 
 
 {/* <-------------------------------------------------- SIDE MENU ----------------------------------------------------------------> */}
-
+    {
+        open && 
      <SideMenu>
-           <Close>
+           <Close onClick={handleOpen}>
               <CloseOutlinedIcon fontSize='large'/>
            </Close>
           <SideMenuCenter>
@@ -57,15 +66,28 @@ const Navbar = () => {
                 <img src="https://images.pexels.com/photos/15031644/pexels-photo-15031644.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
                 <p>Nilay Singh</p>
                 </div> 
-                <Link to='settings'>
-                <div className='settings'>
+                <Link to='/settings'>
+                <div onClick={handleOpen} className='settings'>
                 <SettingsOutlinedIcon/>
                 <p>Settings</p>
+                </div> 
+                </Link>
+                <Link to='/signin'>
+                <div onClick={handleOpen} className='settings'>
+                <LoginOutlinedIcon/>
+                <p>Sign In</p>
+                </div> 
+                </Link>
+                <Link to='/signup'>
+                <div onClick={handleOpen} className='settings'>
+                <HowToRegOutlinedIcon/>
+                <p>Sign Up</p>
                 </div> 
                 </Link>
           </SideMenuLeft>
      </SideMenu>
 
+    }
 
 {/* <-------------------------------------------------- SIDE MENU ----------------------------------------------------------------> */}
 
@@ -193,18 +215,18 @@ padding: 1rem;
 position: absolute;
 background-color:#0d0d0f;
 cursor: pointer;
-display: none;
-width: 80vw;
+width: 0vw;
 height: 100vh;
 z-index: 100;
 top: 0;
 right: 0;
+display: flex;
+flex-direction: column;
+align-items:left;
+justify-content:flex-start;
+gap:3rem;
 @media(max-width:768px){
-    display:flex;
-    flex-direction: column;
-    align-items:left;
-    justify-content:flex-start;
-    gap: 3rem;
+    width:80vw;
 }
 `;
 
@@ -260,3 +282,8 @@ img{
 `;
 
 {/* <--------------------------------------------------RESPONSIVE SIDE MENU ----------------------------------------------------------------> */}
+
+
+
+
+  
