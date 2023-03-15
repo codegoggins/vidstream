@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import {IoMdNotificationsOutline} from 'react-icons/io'
 import {Link} from 'react-router-dom'
 import Notifications from './Notifications';
+import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
 
 const Navbar = () => {
 
@@ -28,6 +29,9 @@ const Navbar = () => {
                     <IoMdNotificationsOutline/>
                 </p>
                 <img src="https://images.pexels.com/photos/15031644/pexels-photo-15031644.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
+                <Link to='settings'>
+                <SettingsOutlinedIcon/>
+                </Link>
           </Left>
           <Notifications show={toggle}/>
      </Container>
@@ -46,6 +50,14 @@ display: flex;
 align-items: center;
 justify-content: space-between;
 position: relative;
+
+@media(max-width:768px){
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+    height: 8rem;
+    margin-bottom: 2rem;
+}
 
 `;
 
@@ -101,7 +113,11 @@ img{
     object-fit: cover;
     border-radius:50%;
     border: 0.15rem solid #e473ff;
-    cursor: pointer;
 }
+
+@media(max-width:768px){
+    display: none;
+}
+
 
 `;

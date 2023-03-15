@@ -5,19 +5,18 @@ import {Link} from 'react-router-dom'
 
 
 const Container = styled.div`
-padding: 4rem;
+padding: 0 1rem;
 display:grid;
-grid-template-columns:1fr;
-gap:3rem;
+grid-template-columns: 1fr;
+gap: 3rem;
 
 @media(min-width:768px){
   grid-template-columns:repeat(2,1fr);
 }
 
-@media(min-width:1000px){
+@media(min-width:1100px){
   grid-template-columns:repeat(3,1fr);
 }
-
 
 `
 

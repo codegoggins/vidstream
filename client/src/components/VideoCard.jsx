@@ -25,10 +25,11 @@ export default VideoCard
 // <----------------------------------------- CSS ------------------------------------------------->
 
 const Container = styled.div`
+margin: 0 auto;
 display: flex;
 flex-direction: column;
 height: auto;
-width: 22rem;
+width: 20rem;
 cursor: pointer;
 gap:0.5rem;
 
