@@ -9,7 +9,7 @@ const Video = () => {
     <>
      <Container>
          <div className='video'>
-         <iframe width="100%" height="500" src="https://www.youtube.com/embed/FG9M0aEpJGE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+         <iframe width="100%" height="100%" src="https://www.youtube.com/embed/FG9M0aEpJGE" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
          </div>
          <div className='video-details'>
             <p className='video-title'>
@@ -57,12 +57,18 @@ display: flex;
 align-items: center;
 flex-direction: column;
 padding: 3rem;
-gap:0.8rem;
+gap:1rem;
 
 .video{
-    width: 100%;
+    width: 95vw;
+    height:30rem;
     border-radius: 1rem;
     overflow: hidden;
+
+    @media(max-width:800px){
+       width: 90vw;
+       height:15rem;
+    }
 }
 
 .video-details{
@@ -97,6 +103,29 @@ gap:0.8rem;
             cursor: pointer;
         }
     }
+
+    @media(max-width:800px){
+    gap: 1rem;
+
+    .video-title{
+        font-size: 1rem;
+    }
+
+    .video-buttons{
+        gap: 1rem;
+
+        .likes , .dislikes{ 
+            gap: 0.4rem;
+        }
+
+        .like-btn , .dislike-btn{
+            height: 2rem;
+            width: 2rem;
+        }
+    }
+    }
+
+    
 }
 
 .user{
@@ -125,6 +154,20 @@ gap:0.8rem;
         padding: 0.8rem 2rem;
         border-radius: 2rem;
         cursor: pointer;
+    }
+
+    @media(max-width:800px){
+        .user-details{
+            gap: 0.4rem;
+            .user-img{
+                height: 2rem;
+                width: 2rem;
+            }
+        }
+
+        .subscribe-button{
+            padding: 0.5rem 1rem;
+        }
     }
 }
     
