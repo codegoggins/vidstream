@@ -43,6 +43,18 @@ const Navbar = () => {
                 <Link to='settings'>
                 <SettingsOutlinedIcon/>
                 </Link>
+                <Link to='/signin'>
+                <div className='signin'>
+                <LoginOutlinedIcon/>
+                <p>Sign In</p>
+                </div> 
+                </Link>
+                <Link to='/signup'>
+                <div className='signup'>
+                <HowToRegOutlinedIcon/>
+                <p>Sign Up</p>
+                </div> 
+                </Link>
           </Left>
           <SideMenuBtn onClick={handleOpen}>
               <MenuOutlinedIcon fontSize='large'/>
@@ -188,6 +200,15 @@ img{
     display: none;
 }
 
+.signin,.signup{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    
+    p{
+        font-size: 1.2rem;
+    }
+}
 
 `;
 

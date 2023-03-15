@@ -25,7 +25,7 @@ export default SignUp
 // <----------------------------------------- CSS ------------------------------------------------->
 
 const Container = styled.div`
-height:70vh;
+height:74vh;
 width:25rem;
 border: 1px solid #e473ff;
 border-radius: 1rem;

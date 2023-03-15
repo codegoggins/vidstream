@@ -21,7 +21,7 @@ export default SignIn
 // <----------------------------------------- CSS ------------------------------------------------->
 
 const Container = styled.div`
-height:65vh;
+height:74vh;
 width:25rem;
 border: 1px solid #e473ff;
 border-radius: 1rem;
@@ -32,6 +32,9 @@ align-items: center;
 justify-content: center;
 gap:2rem;
 padding: 1rem;
+@media(max-width:800px){
+  width:20rem;
+}
 `;
 
 const Title = styled.h1``
@@ -53,6 +56,9 @@ gap: 1.5rem;
     }
     &:focus{
         outline: none;
+    }
+    @media(max-width:800px){
+      padding: 0.8rem 5rem 0.8rem 0.5rem;
     }
    }
    button{

@@ -23,7 +23,7 @@ export default Footer
 const Container = styled.div`
   background-color:#1c1d1f;
   height: 5rem;
-  width:full;
+  width:100vw;
   padding: 1rem 3rem;
   margin-top: 3rem;
   display: flex;
