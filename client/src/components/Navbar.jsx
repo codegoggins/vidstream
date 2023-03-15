@@ -56,7 +56,6 @@ position: relative;
     padding: 1rem;
     gap: 1rem;
     height: 8rem;
-    margin-bottom: 2rem;
 }
 
 `;

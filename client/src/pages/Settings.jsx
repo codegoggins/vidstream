@@ -48,6 +48,12 @@ width: 100vw;
 const User = styled.div`
 display: flex;
 padding: 1rem;
+
+@media(max-width:800px){
+  flex-direction: column;
+  gap: 2rem;
+}
+
 `;
 
 const Profile = styled.div`

@@ -8,7 +8,7 @@ const CommentSection = () => {
     <Container>
         <p className='title'>Comments</p>
         <div className='post-comment'>
-            <input type="text" placeholder='Enter a comment'/>
+            <input type="text" placeholder='Enter comment'/>
             <p><SendOutlinedIcon/></p>
         </div>
         <div className='comments'>
@@ -44,7 +44,7 @@ input{
     font-size: 1rem;
     border: none;
     border-bottom: 0.08rem solid white;
-    padding: 0.8rem 8rem 0.8rem 0.5rem;
+    padding: 0.8rem 2rem 0.8rem 0.5rem;
     border-radius: 0.3rem;
     background:transparent;
     color: grey;
