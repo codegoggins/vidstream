@@ -34,6 +34,7 @@ const Container = styled.div`
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    height: 6rem;
   }
 
 `;

@@ -4,6 +4,8 @@ import {IoMdNotificationsOutline} from 'react-icons/io'
 import {Link} from 'react-router-dom'
 import Notifications from './Notifications';
 import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
+import MenuOutlinedIcon from '@mui/icons-material/MenuOutlined';
+import CloseOutlinedIcon from '@mui/icons-material/CloseOutlined';
 
 const Navbar = () => {
 
@@ -14,6 +16,7 @@ const Navbar = () => {
   }
 
   return (
+      <>
      <Container>
         <Link to='/'>
           <Right>
@@ -33,12 +36,54 @@ const Navbar = () => {
                 <SettingsOutlinedIcon/>
                 </Link>
           </Left>
+          <SideMenuBtn>
+              <MenuOutlinedIcon fontSize='large'/>
+          </SideMenuBtn>
           <Notifications show={toggle}/>
      </Container>
+
+
+{/* <-------------------------------------------------- SIDE MENU ----------------------------------------------------------------> */}
+
+     <SideMenu>
+           <Close>
+              <CloseOutlinedIcon fontSize='large'/>
+           </Close>
+          <SideMenuCenter>
+              <input type="text" placeholder='Search'/>
+          </SideMenuCenter>
+          <SideMenuLeft>
+                <div className='profile'>
+                <img src="https://images.pexels.com/photos/15031644/pexels-photo-15031644.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
+                <p>Nilay Singh</p>
+                </div> 
+                <Link to='settings'>
+                <div className='settings'>
+                <SettingsOutlinedIcon/>
+                <p>Settings</p>
+                </div> 
+                </Link>
+          </SideMenuLeft>
+     </SideMenu>
+
+
+{/* <-------------------------------------------------- SIDE MENU ----------------------------------------------------------------> */}
+
+
+     </>
   )
 }
 
 export default Navbar
+
+
+
+
+
+
+
+
+
 
 
 // <----------------------------------------- CSS ------------------------------------------------->
@@ -52,10 +97,9 @@ justify-content: space-between;
 position: relative;
 
 @media(max-width:768px){
-    flex-direction: column;
     padding: 1rem;
     gap: 1rem;
-    height: 8rem;
+    height: 5rem;
 }
 
 `;
@@ -93,6 +137,10 @@ input{
     }
 }
 
+@media(max-width:768px){
+    display: none;
+}
+
 `;
 
 
@@ -120,3 +168,95 @@ img{
 
 
 `;
+
+
+{/* <--------------------------------------------------RESPONSIVE SIDE MENU ----------------------------------------------------------------> */}
+
+
+const SideMenuBtn = styled.div`
+cursor: pointer;
+display: none;
+@media(max-width:768px){
+    display:block;
+}
+`;
+
+const Close = styled.div`
+width: 100%;
+cursor: pointer;
+display: flex;
+justify-content:right;
+`;
+
+const SideMenu = styled.div`
+padding: 1rem;
+position: absolute;
+background-color:#0d0d0f;
+cursor: pointer;
+display: none;
+width: 80vw;
+height: 100vh;
+z-index: 100;
+top: 0;
+right: 0;
+@media(max-width:768px){
+    display:flex;
+    flex-direction: column;
+    align-items:left;
+    justify-content:flex-start;
+    gap: 3rem;
+}
+`;
+
+
+const SideMenuCenter = styled.div`
+input{
+    width: 95%;
+    font-size: 1rem;
+    border: none;
+    padding: 0.8rem 8rem 0.8rem 0.5rem;
+    border-radius: 0.5rem;
+    background-color: #1c1d1f;
+    color: grey;
+    &::placeholder{
+        color: grey;
+    }
+    &:focus{
+        outline: none;
+    }
+}
+`;
+
+
+const SideMenuLeft = styled.div`
+display: flex;
+flex-direction: column;
+align-items: left;
+gap: 2rem;
+
+p{
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+img{
+    height: 2.8rem;
+    width: 2.8rem;
+    object-fit: cover;
+    border-radius:50%;
+    border: 0.15rem solid #e473ff;
+}
+
+.profile , .settings{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.settings{
+    margin-left: 1rem;
+}
+
+`;
+
+{/* <--------------------------------------------------RESPONSIVE SIDE MENU ----------------------------------------------------------------> */}
